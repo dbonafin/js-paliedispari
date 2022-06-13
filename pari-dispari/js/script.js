@@ -14,7 +14,6 @@ const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
 // Result number
 const sommaNumeri = userNumber + genRandomNumb(1,5);
 
-
 // Function that generates a random number between 1 and 5
 function genRandomNumb(min, max) {
     return Math.floor(Math.random() * (5 - 1 + 1) ) + 1;
@@ -26,7 +25,7 @@ const userNumberEvenOrOdd = isEvenOrOdd(userNumber);
 function isEvenOrOdd() {
     let evenOrOdd;
 
-    if(sommaNumeri % 2 === 0) {
+    if (sommaNumeri % 2 === 0) {
         evenOrOdd = "pari";
     } else {
         evenOrOdd = "dispari";
@@ -37,12 +36,7 @@ function isEvenOrOdd() {
 
 // Check if the user picks the winner choice
 if (userChoice === userNumberEvenOrOdd) {
-    alert ("Hai vinto")
+    alert("Hai vinto");
 } else {
-    alert("Hai perso")
+    alert("Hai perso");
 }
-
-// Output result in console
-console.log (userChoice);
-console.log (sommaNumeri);
-console.log (userNumberEvenOrOdd);

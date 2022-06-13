@@ -32,7 +32,6 @@ function isPalindrome() {
 }
 
 // Output result in console
-console.log(userWord);
 console.log(palindromeOrNot);
 
 
