@@ -9,19 +9,32 @@
 
 // Ask the user to pick even or odd
 const userChoice = prompt("Scegli pari o dispari")
+
 // Ask the user a number between 1 and 5
 const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
+
 // Result number
 const sommaNumeri = userNumber + genRandomNumb(1,5);
 
-// Function that generates a random number between 1 and 5
-function genRandomNumb(min, max) {
-    return Math.floor(Math.random() * (5 - 1 + 1) ) + 1;
-}
-
-// Function that checks if the result number is even or odd
+// Check if the user picks the winner choice
 const userNumberEvenOrOdd = isEvenOrOdd(userNumber);
 
+if (userChoice === userNumberEvenOrOdd) {
+    alert("Hai vinto");
+} else {
+    alert("Hai perso");
+}
+
+
+// FUNCTIONS //
+
+
+// Function that generates a random number between 1 and 5
+function genRandomNumb(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+// Function that checks if the result number is even or odd
 function isEvenOrOdd() {
     let evenOrOdd;
 
@@ -32,11 +45,4 @@ function isEvenOrOdd() {
     }
 
     return evenOrOdd;
-}
-
-// Check if the user picks the winner choice
-if (userChoice === userNumberEvenOrOdd) {
-    alert("Hai vinto");
-} else {
-    alert("Hai perso");
 }

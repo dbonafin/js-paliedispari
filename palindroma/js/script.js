@@ -8,6 +8,13 @@ const userWord = prompt("Inserisci una parola");
 // The condition of the function
 const palindromeOrNot = isPalindrome(userWord);
 
+// Output result in console
+console.log(palindromeOrNot);
+
+
+// FUNCTIONS //
+
+
 // Logic process of the function for check if the word is palindrome or not
 
 function isPalindrome() {
@@ -30,8 +37,5 @@ function isPalindrome() {
     // If they are equals the return is true in console
     return true;
 }
-
-// Output result in console
-console.log(palindromeOrNot);
 
 
